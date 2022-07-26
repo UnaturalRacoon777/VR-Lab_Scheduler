@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Proxima Nova';
+}
+
+li { list-style: none; } /* this removes the bullet points from lists */
+
+/*======================  H   E   A   D   E   R ======================*/
+header
+{
+    background-color: #232323;
+}
+
+/*  The header-container and the user-icon class help position the logo in the center
+    and the user icon to the right which will be used to login and access the user menu*/
+.header-container
+{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.user-icon
+{
+    position: absolute;
+    right: 65px;
+    top: 25px;
+}
+
+
+/* DROP-DOWN MENU DESIGN*/
+.user-icon:active + .dropdown
+{
+    display: block;
+}
+
+.dropdown
+{
+    position: absolute;
+    right: 35px;
+    top: 80px;
+    background-color: rgba(255, 0, 0, 0.351);
+    border-radius: 5px;
+}
+
+.dropdown li
+{
+    padding: 10px;
+}
+
+.dropdown li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-size: 1.0rem;
+}
+
+
+
+/*======================    B  O   D   Y   ======================*/
+.buttons-container
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.login-button
+{
+    width: 120px;
+    height: 50px;
+    border: 1px solid;
+    border-color: rgb(0, 255, 72);
+    font-size: 9px;
+    font-size: .9rem;
+    color: black;
+    border-radius: 8px;
+    background-color: #62ffbb;
+    box-shadow: 0 15px 18px 0 rgba(98, 255, 187, 0.604), 0 15px 50px 0 rgba(98, 255, 187, 0.19);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    cursor: pointer;
+}
+
+/* good default shadow effect=
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,0.19) */
+
+.login-button:hover
+{
+    box-shadow: 0 9px 9px 0 rgba(24, 255, 155, 0.641), 0 5px 50px 0 rgba(24, 255, 155, 0.19);
+    color: rgb(0, 0, 0);
+    background-color: #00fd8f;
+    font-size: 10px;
+    font-size: 1.0rem;
+    transform: translateY(3px);
+}
+
+.login-button:active
+{
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transform: translateY(8px);
+}
+
+.signup-button
+{
+    width: 120px;
+    height: 50px;
+    border: 1px solid;
+    border-color: #00f3fb;
+    font-size: 9px;
+    font-size: .9rem;
+    color: black;
+    border-radius: 8px;
+    background-color: #00f9ff;
+    box-shadow: 0 15px 18px 0 rgba(0, 249, 255, 0.604), 0 15px 50px 0 rgba(0, 249, 255, 0.19);
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    cursor: pointer;
+}
+
+.signup-button:hover
+{
+    box-shadow: 0 9px 9px 0 rgba(0, 233, 250, 0.641), 0 5px 50px 0 rgba(0, 233, 250, 0.19);
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 233, 250);
+    font-size: 10px;
+    font-size: 1.0rem;
+    transform: translateY(3px);
+}
+
+.signup-button:active
+{
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+    transform: translateY(8px);
+
+}
+
+
+
+/*Forms*/
+
+input[type=text], input[type=password]
+{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+.cancel-btn
+{
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.submit-btn
+{
+    padding: 14px 20px;
+    background-color: #00ff62;
+}
+
+
+/*====================== F    O   O   T   E   R ======================*/
+footer
+{
+    text-align: center;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #232323;
+}
+
+.copyright 
+{
+    font-style: italic;
+    color: rgb(200, 200, 200);
+}

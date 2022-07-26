@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="main.css" type="text/css">
 
-    <title>Home - My Lewis VR Lab Scheduler</title>
+    <title>Sign up - My Lewis VR Lab Scheduler</title>
 </head>
 
 <!-- BODY -->
@@ -40,17 +40,29 @@
         </div>
     </header>
 
-    <!-- BUTTONS -->
-    <div class="buttons-container">
-        <a href="login.html">
-            <button class="login-button">Log in</button>
-        </a>
 
-        <a href="signup.html">
-            <button class="signup-button">Sign up</button>
-        </a>
-    </div>
+    <!-- SIGN UP FORM -->
+    <form action="signup.php" style="border: 1px">
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <p>Create an account to reserve devices at the VR Lab.</p>
+            <hr>
 
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter your Lewis Email" name="email" required>
+
+            <label for="pass"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="pass" required>
+
+            <label for="confirm-pass"><b>confirm Password</b></label>
+            <input type="text" placeholder="Confirm your password" name="confirm-pass" required>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="button" class="submit-btn">Create Account</button>
+            </div>
+        </div>
+    </form>
 
     <!-- FOOTER -->
     <footer>
