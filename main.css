@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Proxima Nova';
-}
-
 li { list-style: none; } /* this removes the bullet points from lists */
 
 /*======================  H   E   A   D   E   R ======================*/
@@ -45,7 +41,7 @@ header
     position: absolute;
     right: 35px;
     top: 80px;
-    background-color: rgba(255, 0, 0, 0.351);
+    background-color: rgb(166, 0, 0);
     border-radius: 5px;
 }
 
@@ -143,47 +139,124 @@ header
     transition-duration: 0s;
     -webkit-transition-duration: 0s;
     transform: translateY(8px);
-
 }
 
 
+/*======================    F   O   R   M   S   ======================*/
 
-/*Forms*/
-
-input[type=text], input[type=password]
+.center-container
 {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
+.form-container
+{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    margin-bottom: 120px;
+    padding: 2rem;
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 8px;
+}
+
+form h1
+{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.input-field-group
+{
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-field-group i
+{
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    transform: translateY(-50%);
+}
+
+.input-field
+{
+    display: block;
+    width: 100%;
+    padding: .75rem .75rem .75rem 2rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
     outline: none;
-  }
-
-.cancel-btn
-{
-    padding: 14px 20px;
-    background-color: #f44336;
+    background-color: #eeeeee;
 }
 
-.submit-btn
+.input-field:focus
 {
-    padding: 14px 20px;
-    background-color: #00ff62;
+    border-color:rgb(18, 0, 0);
+    background: white;
 }
 
+.incorrect-email-message
+{
+    color: red;
+    margin-top: .5rem;
+    font-size: .85rem;
+}
+
+.login-btn
+{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    background:rgb(166, 0, 0);
+    box-shadow: 0 8px 18px 0 rgba(0,0,0,.24), 0 12px 30px 0 rgba(0,0,0,0.19);
+}
+
+.login-btn:hover
+{
+    background-color: rgb(214, 0, 0);
+}
+
+.login-btn:active
+{
+    transform: scale(.97);
+}
+
+.form-links
+{
+    margin-top: 1.75rem;
+    text-align: center;
+}
+
+.form-links a
+{
+    color: rgb(0, 106, 255);
+    text-decoration: none;
+}
+
+.form-links:hover
+{
+    text-decoration: underline;
+}
 
 /*====================== F    O   O   T   E   R ======================*/
 footer
 {
     text-align: center;
-    padding: 30px;
     position: fixed;
+    padding: 30px;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -192,6 +265,7 @@ footer
 
 .copyright 
 {
+    font-family: 'Proxima Nova';
     font-style: italic;
     color: rgb(200, 200, 200);
 }

@@ -8,6 +8,7 @@
     <meta name="description" content="Lewis University Lab Scheduler Webpage">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="main.css" type="text/css">
 
     <title>Log in - My Lewis VR Lab Scheduler</title>
@@ -39,6 +40,36 @@
             </a>
         </div>
     </header>
+
+    <!-- LOGIN FORM -->
+
+    <div class="center-container">
+        <form action="login.php" style="border: 1px">
+            <div class="form-container">
+                <h1>Log In</h1>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-user"></i>
+                    <input class="input-field" type="text" placeholder="Enter your Username/Lewis Email" name="email" autofocus required>
+                </div>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-lock"></i>
+                    <input class="input-field" type="password" placeholder="Enter Password" name="pass" required>
+                </div>
+    
+                <button class="login-btn" type="submit">Log In</button>
+    
+                <p class="form-links">
+                    <a href="#">Forgot your password?</a>
+                </p>
+    
+                <p class="form-links">
+                    <a href="signup.html">Don't have an account? Sign up!</a>
+                </p>
+            </div>
+        </form>
+    </div>
 
 
     <!-- FOOTER -->

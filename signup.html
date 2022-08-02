@@ -8,6 +8,7 @@
     <meta name="description" content="Lewis University Lab Scheduler Webpage">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="main.css" type="text/css">
 
     <title>Sign up - My Lewis VR Lab Scheduler</title>
@@ -15,6 +16,7 @@
 
 <!-- BODY -->
 <body>
+    <script src="main.js"></script>
     
     <!-- HEADER -->
     <header>
@@ -42,27 +44,42 @@
 
 
     <!-- SIGN UP FORM -->
-    <form action="signup.php" style="border: 1px">
-        <div class="form-container">
-            <h1>Sign Up</h1>
-            <p>Create an account to reserve devices at the VR Lab.</p>
-            <hr>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter your Lewis Email" name="email" required>
-
-            <label for="pass"><b>Password</b></label>
-            <input type="text" placeholder="Enter Password" name="pass" required>
-
-            <label for="confirm-pass"><b>confirm Password</b></label>
-            <input type="text" placeholder="Confirm your password" name="confirm-pass" required>
-
-            <div class="form-buttons">
-                <button type="button" class="cancel-btn">Cancel</button>
-                <button type="button" class="submit-btn">Create Account</button>
+    <div class="center-container">
+        <form action="signup.php" style="border: 1px">
+            <div class="form-container">
+                <h1>Sign Up</h1>
+                <p>Create an account to reserve devices at the VR Lab.</p>
+                <hr>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-user"></i>
+                    <input class="input-field" type="text" placeholder="Enter Username" name="username" autofocus required>
+                </div>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-envelope"></i>
+                    <input class="input-field" type="text" placeholder="Enter Lewis Email" name="email" required>
+                </div>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-lock"></i>
+                    <input class="input-field" type="password" placeholder="Enter Password" name="pass" required>
+                </div>
+    
+                <div class="input-field-group">
+                    <i class="fas fa-check"></i>
+                    <input class="input-field" type="password" placeholder="Confirm Password" name="confirm-pass" required>
+                </div>
+    
+                <button class="login-btn" type="submit">Sign Up</button>
+    
+                <p class="form-links">
+                    <a href="login.html">Already have an account? Log in!</a>
+                </p>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+    
 
     <!-- FOOTER -->
     <footer>
