@@ -41,8 +41,9 @@ header
     position: absolute;
     right: 35px;
     top: 80px;
-    background-color: rgb(166, 0, 0);
+    background-color: rgb(219, 0, 0);
     border-radius: 5px;
+    box-shadow: 0 7px 18px 0 rgba(219,0,0,.24), 0 7px 50px 0 rgba(219,0,0,0.19);
 }
 
 .dropdown li
@@ -117,7 +118,7 @@ header
     font-size: .9rem;
     color: black;
     border-radius: 8px;
-    background-color: #00f9ff;
+    background-color: rgb(0, 233, 250);
     box-shadow: 0 15px 18px 0 rgba(0, 249, 255, 0.604), 0 15px 50px 0 rgba(0, 249, 255, 0.19);
     transition-duration: .2s;
     -webkit-transition-duration: .2s;
@@ -128,7 +129,7 @@ header
 {
     box-shadow: 0 9px 9px 0 rgba(0, 233, 250, 0.641), 0 5px 50px 0 rgba(0, 233, 250, 0.19);
     color: rgb(0, 0, 0);
-    background-color: rgb(0, 233, 250);
+    background-color: #00f3fb;
     font-size: 10px;
     font-size: 1.0rem;
     transform: translateY(3px);
@@ -161,7 +162,7 @@ header
     margin-bottom: 120px;
     padding: 2rem;
     box-shadow: 0 14px 18px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
 form h1
@@ -202,12 +203,6 @@ form h1
     background: white;
 }
 
-.incorrect-email-message
-{
-    color: red;
-    margin-top: .5rem;
-    font-size: .85rem;
-}
 
 .login-btn
 {
@@ -251,11 +246,131 @@ form h1
     text-decoration: underline;
 }
 
+
+/*======================    C   A   L   E   N   D   A   R ======================*/
+.calendar-container
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.calendar
+{
+    width: 25rem;
+    height: 33rem;
+    background-color: #e3e3e3;
+    border-radius: 16px;
+    margin-top: 60px;
+    margin-bottom: 150px;
+    margin-left: 50px;
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+.month
+{
+    width: 100%;
+    height: 6rem;
+    background-color: rgb(219, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 0 18px 0 rgba(219, 0, 0, 0.604), 0 0 50px 0 rgba(219, 0, 0, 0.19);
+}
+
+.month i
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.month h1
+{
+    font-size: 1.6rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.month h1:hover {cursor: pointer;}
+
+.month h1:active {  transform: scale(.90);    }
+
+.month p
+{
+    font-size: 1.2rem;
+}
+
+.weekdays
+{
+    width: 100%;
+    height: 5rem;
+    padding: 0 .4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    width: calc(24.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+}
+
+.days /* customize the days container (white part) */
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .2rem;
+}
+
+.days div /* customize the position of each day number to calendar format in restpec to the container margin */
+{
+    font-size: 1.4rem;
+    margin: .3rem;
+    width: calc(20.2rem / 7);
+    height: 2.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .2s;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+}
+
+.days div:hover:not(.today)
+{
+    border: .2rem solid rgba(255, 0, 0, 0.82);
+    border-radius: 90px;
+    cursor: pointer;
+}
+
+.prev-date, .next-date
+{   opacity: .5;    }
+
+.today
+{
+    background-color: rgba(255, 0, 0, 0.82);
+    border-radius: 90px;
+    box-shadow: 0 0 18px 0 rgba(255, 0, 0, 0.604), 0 0 50px 0 rgba(255, 0, 0, 0.19);
+}
+
 /*====================== F    O   O   T   E   R ======================*/
 footer
 {
     text-align: center;
-    position: fixed;
     padding: 30px;
     width: 100%;
     left: 0;
