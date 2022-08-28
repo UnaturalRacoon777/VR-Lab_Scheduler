@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 li { list-style: none; } /* this removes the bullet points from lists */
@@ -29,16 +30,21 @@ header
     top: 25px;
 }
 
-
-/* DROP-DOWN MENU DESIGN*/
-.user-icon:active + .dropdown
+.username p
 {
-    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
+
+/* DROP-DOWN MENU DESIGN*/
 .dropdown
 {
+    display: none;
     position: absolute;
+    max-width: 110px;
     right: 35px;
     top: 80px;
     background-color: rgb(219, 0, 0);
@@ -48,7 +54,7 @@ header
 
 .dropdown li
 {
-    padding: 10px;
+    padding: .6rem;
 }
 
 .dropdown li a
@@ -58,7 +64,6 @@ header
     font-size: 10px;
     font-size: 1.0rem;
 }
-
 
 
 /*======================    B  O   D   Y   ======================*/
@@ -152,6 +157,7 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 100px;
 }
 
 .form-container
@@ -169,6 +175,20 @@ form h1
 {
     margin-bottom: 2rem;
     text-align: center;
+}
+
+form p
+{
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.error-msg
+{
+    text-align: center;
+    color: crimson;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .input-field-group
@@ -248,11 +268,12 @@ form h1
 
 
 /*======================    C   A   L   E   N   D   A   R ======================*/
-.calendar-container
+.dateTime-container
 {
     display: flex;
     justify-content: left;
     align-items: center;
+    gap: 100px;
 }
 
 .calendar
@@ -365,6 +386,91 @@ form h1
     background-color: rgba(255, 0, 0, 0.82);
     border-radius: 90px;
     box-shadow: 0 0 18px 0 rgba(255, 0, 0, 0.604), 0 0 50px 0 rgba(255, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+/*======================    T  I   M   E    -   S    E   L   E   C   T   O   R   ======================*/
+.blockElements
+{
+    display: block;
+}
+
+.timeSelector
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .1rem;
+}
+
+/*======================    T  A   B   L   E   S   SECTION ======================*/
+
+.tableBtns
+{
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    margin: .5rem;
+}
+
+.removeForm
+{
+    position: absolute;
+    left: 5px;
+    top: 300px;
+    display: none;
+}
+
+.cancel, .remove, .saveEdit
+{
+    display: none;
+}
+
+#editMsg, #deviceName, #programsList, #save-btn
+{
+    visibility: hidden;
+}
+
+#editInput, #removeInput
+{
+    width: 50px;
+}
+
+.deviceTbl
+{
+    border-collapse: collapse;
+    width: 800px;
+    max-width: 800px;
+    padding: .1rem;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 16px;
+}
+
+.deviceTbl th
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+}
+
+.deviceTbl td
+{
+    padding: 8px;
+    text-align: center;;
+}
+
+.deviceTbl tr:nth-child(even)
+{
+    background-color: rgb(255, 67, 67);
+}
+
+.tableInputs
+{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: .5rem;
 }
 
 /*====================== F    O   O   T   E   R ======================*/
